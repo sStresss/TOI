@@ -1,0 +1,580 @@
+{% extends "timetable/layout/basic.html" %}
+{% block title %}Мониторинг{% endblock %}
+{% block content %}
+
+<body class="sinaps">
+<div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
+<style>
+  * {
+  box-sizing:border-box;
+}
+  table {
+  overflow: hidden;
+  display:inline-block;
+}
+  td, th {
+    border: 1px solid #999;
+
+    position: relative;
+}
+  td:hover::before {
+    background-color: #ffa;
+    opacity: .3;
+    content: '';
+    height: 100%;
+    left: -5000px;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+    z-index: 1;
+}
+
+
+td:hover::after {
+    background-color: #ffa;
+    opacity: .3;
+    content: '';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: 2;
+}
+
+  .preloader {
+      /*фиксированное позиционирование*/
+      position: fixed;
+      /* координаты положения */
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /* фоновый цвет элемента */
+      background: #e0e0e0;
+      /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+      z-index: 1001;
+    }
+
+    .preloader__row {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 70px;
+      height: 70px;
+      /*margin-top: -35px;*/
+      /*margin-left: -35px;*/
+      text-align: center;
+      animation: preloader-rotate 2s infinite linear;
+    }
+
+    .preloader__item {
+      position: absolute;
+      /*display: inline-block;*/
+      top: 0;
+      background-color: #337ab7;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      animation: preloader-bounce 2s infinite ease-in-out;
+    }
+
+    .preloader__item:last-child {
+      top: auto;
+      bottom: 0;
+      animation-delay: -1s;
+    }
+
+    @keyframes preloader-rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes preloader-bounce {
+
+      0%,
+      100% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+    }
+</style>
+<script>
+  $(window).on('load', function () {
+      $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+    });
+</script>
+
+
+
+<style>
+  .container {
+}
+/* Resize images */
+.container img {
+    width: 70%;
+}
+</style>
+
+<h1 style="text-align: center">Мониторинг пикселей на ТОИ</h1>
+<br>
+<center>
+<div class="container_33">
+  <div>
+    <div class="container">
+    <img src="/static/timetable/monitor.png" alt="">
+</div>
+  </div>
+
+
+  <div>
+    <div class="row" style="width: 400px">
+
+    {% for x in cab %}
+      <!-- Name TOI cabinet. x is amount broken pixel -->
+      <div class="col-sm-4">
+
+        <div class="card m-2">
+
+          <button type="button" class="modal_window" data-toggle="modal" data-target="#mod{{x}}" id={{x}}>
+            <div class="daySubscript">{{x}}</div>
+            <div class="percent_broken_pixel" id="percent_{{x}}"></div>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- The modal window for each cabinet -->
+      <div class="modal" id="mod{{x}}" style="background-color: #1c5e72">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            <!-- Modal cabinet header -->
+            <div class="modal-header" style="margin: 0 auto">
+              <h4 class="modal-title" >Кабинет № {{x}}</h4>
+            </div>
+
+            <!-- Modal cabinet body -->
+            <div class="row">
+
+              {% for y in pod_cab %}
+              <center>
+                <div class="modal-body">
+                  <div class="col-sm-4">
+                    <div class="card m-2">
+                      <button type="button" class="modal_button" data-toggle="modal"
+                              data-target="#pod_mod_{{y}}_{{x}}_" id="pod_{{y}}_{{x}}">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </center>
+
+              <!-- The modal for scoreboard -->
+              <div class="modal" id="pod_mod_{{y}}_{{x}}_" style="background-color: #1b6d85">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                  <!-- Modal scoreboard header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Модуль № {{y}} | на {{x}} кабинете</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                  </div>
+
+                    <!-- Modal scoreboard body -->
+                    <div class="modal-body" id="zor">
+                      <h1>Выберите цвет</h1>
+                        <ul class="tabs-links" id="pod_mod_{{y}}_{{x}}_link">
+                          <li style="background: red; color: #fdfdfd; width: 100px" id="pod_{{y}}_{{x}}_red"></li>
+                          <li style="background: green; color: #ffffff; width: 100px" id="pod_{{y}}_{{x}}_green"></li>
+                          <li style="background: blue; color: #ffffff; width: 100px" id="pod_{{y}}_{{x}}_blue"></li>
+                        </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+
+          <!-- Modal footer -->
+            <center>
+          <div class="modal-footer" style="align-items: center">
+            <button type="button" class="btn btn-danger" data-dismiss="modal" >Закрыть</button>
+          </div>
+              </center>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+  </div>
+  </div>
+
+
+  <div><form method="post">
+  {% csrf_token %}
+  <button class="color_button_timetable" id="run" type="submit">Посчитать</button>
+    </form>
+  </div>
+
+
+
+
+</div>
+</center>
+
+
+  <script>
+
+    function calculate_pix() {
+      function loadExhibitResource(file, opts ){
+        if (opts && opts.cache && opts.cache === 'no')   file += "?i="+(Math.random()*99999999);
+        let link  =  document.createElement("link");
+        link.href =  file;
+        link.type =  'application/json';
+        link.rel  =  'exhibit-data';
+        document.getElementsByTagName("head")[0].appendChild(link);
+      }
+      loadExhibitResource('/static/timetable/monitor2.json', {cache: 'no'} );
+      let zor_test = document.getElementById('start')
+      console.log(zor_test + 'zor')
+      $.getJSON( "/static/timetable/monitor2.json", function ( data, textStatus, jqXHR ) {
+        console.log(textStatus)
+        console.log(jqXHR)
+        for (let cabinet in data) {
+          if (typeof (cabinet) !== null) {
+            let buttonCabinet = document.getElementById(cabinet)
+            let numberDefectInCabinet = document.createTextNode(data[cabinet]['col'])
+            let labelPercentInCabinet = document.getElementById('percent_' + cabinet)
+            let PercentBrokenPixel = document.createTextNode(data[cabinet]['percent'] + '%')
+            labelPercentInCabinet.appendChild(PercentBrokenPixel)
+
+            if (numberDefectInCabinet !== null) {
+              buttonCabinet.appendChild(numberDefectInCabinet)
+              if (data[cabinet]['col'] !== 0) {
+                buttonCabinet.style.backgroundColor = '#e4605e'
+              }
+            }
+          }
+          for (let module in data[cabinet]) {
+            let buttonModule = document.getElementById('pod_' + module + '_' + cabinet)
+            let numberDefectInModule = document.createTextNode(data[cabinet][module]["mod_col"])
+            if (buttonModule !== null) {
+              buttonModule.appendChild(numberDefectInModule)
+              if (data[cabinet][module]["mod_col"] !== 0) {
+                buttonModule.style.backgroundColor = '#e4605e'
+              }
+              buttonModule.onclick = function () {
+                let idButtonModule = event.srcElement.id
+                console.log(idButtonModule + ' idButtonModule')
+                let splitCabinetName = idButtonModule.split('_')[2]
+                let splitModuleName = idButtonModule.split('_')[1]
+                let colorButton = ["red", "green", "blue"];
+                let listButton = [];
+                for(let a = 0; a < 3; a ++) {
+                  let idButtonModuleColor = idButtonModule + '_' + colorButton[a];
+                  let buttonModuleColor = document.getElementById(idButtonModuleColor)
+                  buttonModuleColor.innerHTML = '&nbsp;'
+                  let cutStr = colorButton[a].substring(0, 1)
+                  let numberRd = document.createTextNode(data[cabinet][module][cutStr + "_col"])
+                  buttonModuleColor.appendChild(numberRd)
+
+                  if (buttonModuleColor !==null) {
+                    listButton.push(buttonModuleColor)
+                  }
+                }
+                console.log(listButton)
+                for(let i = 0; i < listButton.length; i++) {
+                  (function (i){
+                    let linkButton = listButton[i];
+                    let colorButtonCheck = colorButton[i]
+                    let placeModulePix = 'pod_mod_' + splitModuleName + '_' + splitCabinetName + '_'
+                    linkButton.onclick = function() {
+                      for(let colorCheck in data[splitCabinetName][splitModuleName]){
+                       if(colorCheck == colorButton[i]){
+                        window.getComputedStyle(createTable(colorButton[i],
+                                data[splitCabinetName][splitModuleName][colorButtonCheck], placeModulePix)).opacity;
+                        }
+                      }
+                    }
+                  })(i)
+                }
+              }
+            }
+          }
+        }
+      })
+    }
+    calculate_pix()
+
+    // create table for defect pixel
+    function createTable(color, color_pix, placeInModal) {
+      console.log("in createTable")
+      let body = document.getElementById(placeInModal);
+      let tbl = document.createElement("table");
+      let tblBody = document.createElement("tbody");
+      for (let i = 0; i < 17; i++) {
+        var row = document.createElement("tr");
+        let cell = document.createElement("th");
+        if (i>0) {
+          let cellText = document.createTextNode(i)
+        cell.appendChild(cellText);
+        }
+        cell.style.textAlign = 'center'
+          cell.style.color = '#b7b7b7'
+          cell.style.backgroundColor = color
+          cell.style.width = '25px'
+          cell.style.height = '25px'
+          cell.style.backgroundColor = 'transparent'
+          cell.style.border = 0;
+        row.appendChild(cell)
+        for (let j = 0; j < 32; j++) {
+          if (i == 0) {
+            let cell = document.createElement("th");
+          let cellText = document.createTextNode(j+1);
+          cell.style.textAlign = 'center'
+          cell.style.color = '#b7b7b7'
+          cell.style.backgroundColor = color
+          cell.style.width = '25px'
+          cell.style.height = '25px'
+          cell.style.backgroundColor = 'transparent'
+          cell.style.border = 0;
+          cell.appendChild(cellText);
+          row.appendChild(cell)
+          }
+
+        }
+          // for (let j = 0; j < color_pix[i].length; j++) {
+
+        if (i > 0) {
+          for (let j = 0; j < 32; j++) {
+          let cell = document.createElement("td");
+          cell.style.borderColor = '#181818'
+          cell.style.borderWidth = '1px'
+          cell.style.backgroundColor = color
+          cell.style.width = '25px'
+          cell.style.height = '25px'
+
+          tbl.style.left = '0'
+          tbl.style.right = '0'
+          tbl.style.marginLeft = 'auto'
+          tbl.style.marginRight = 'auto'
+          tbl.style.width = '800px'
+          tbl.style.position = 'absolute'
+          tbl.style.border = 0
+          row.appendChild(cell);
+          if (color_pix[i-1][j] == 0) {
+              cell.style.backgroundColor = 'black'
+          }
+        }
+          }
+
+        tblBody.appendChild(row)
+      }
+
+            // $("#release_data_row_" + i).append("<th id=\"r_"+i+"_"+j+"\" name=\"r_"+i+"_"+j+
+        //         "\" scope=\"col\" style=\"min-width: 2px; font-size: 12px; padding: 0.4rem; padding-top:5px; " +
+        //         "padding-bottom: 5px; text-align: center; font-weight: "+data_text_weight+";color: "+data_color+"; " +
+        //         "background-color: "+data_background+";\" onclick= \"release_data_item_was_clicked("+i+","+j+")\">\n" +
+        //                                 ""+release_data_arr[i][j]+"" +
+        //                                 "</th>")
+
+      // part koz ---------------------------------------------------------------------
+
+        function release_data_item_was_clicked(i,j) {
+            console.log(i)
+            console.log(j)
+            console.log(release_table_width)
+            console.log(release_table_height)
+            release_data_area_color_refresh()
+            n = 0
+            for (;;) {
+                if (n == release_table_height) {
+                    break
+                }
+                else {
+                    document.getElementById("r_" + n + "_" + j).style.backgroundColor = "329afe";
+                    document.getElementById("r_" + n + "_" + j).style.color = "ffffff";
+                    n++
+                }
+            }
+            m = 0
+            for (;;) {
+                if (m == release_table_width) {
+                    break
+                }
+                else {
+                    document.getElementById("r_" + i + "_" + m).style.backgroundColor = "#329afe";
+                    document.getElementById("r_" + i + "_" + m).style.color = "ffffff";
+                    m++
+                }
+            }
+        };
+        function release_data_area_color_refresh() {
+            console.log('r color refresh')
+            i = 0
+            for (;;){
+                if (i == release_table_height) {
+                    break
+                }
+                else {
+                    j = 0
+                    for (;;) {
+                        if (j == release_table_width) {
+                            break
+                        }
+                        else {
+                            if (release_color_array[j] == "0") {
+                                b_color = "#fff"
+                            }
+                            else {
+                                b_color = "#f1f1f1"
+                            }
+                            if (document.getElementById("r_"+i+"_"+j).textContent == 0) {
+                                t_color = "#aeaeae"
+                            }
+                            else {
+                                t_color = "#000000"
+                            }
+                            document.getElementById("r_"+i+"_"+j).style.backgroundColor = b_color
+                            document.getElementById("r_"+i+"_"+j).style.color = t_color
+                        }
+                        j++
+                    }
+                    i++
+                }
+            }
+        }
+
+      //   for (let j = 0; j < color_pix[i].length; j++) {
+      //
+      //     let cell = document.createElement("td");
+      //     let cellText = document.createTextNode(j+1);
+      //     cell.appendChild(cellText);
+      //     cell.style.textAlign = 'center'
+      //     cell.style.color = 'white'
+      //     cell.style.backgroundColor = color
+      //     cell.style.width = '25px'
+      //     cell.style.height = '25px'
+      //     tbl.style.left = '0'
+      //     tbl.style.right = '0'
+      //     tbl.style.marginLeft = 'auto'
+      //     tbl.style.marginRight = 'auto'
+      //     tbl.style.width = '800px'
+      //     tbl.style.position = 'absolute'
+      //     row.appendChild(cell);
+      //     if (color_pix[i][j] == 0) {
+      //         cell.style.backgroundColor = 'black'
+      //     }
+      //   }
+      //   tblBody.appendChild(row);
+      // }
+      tbl.appendChild(tblBody);
+      body.appendChild(tbl);
+      tbl.setAttribute("border", "1");
+      return tbl
+    }
+  </script>
+
+
+
+
+<style>
+    .tabs-links li {list-style: none; display: inline-block; padding: 5px 10px; border: 1px solid #333; cursor: pointer;
+      text-align: center}
+    .tabs-content {position: relative}
+    .tabs-content li {opacity: 0; position: absolute; transition: all 0.5s ease-in;}
+    .tabs-content li:first-child {opacity: 1;}
+    .modal_window {
+        height:120px;
+        width:120px;
+        background: #87da8b;
+        text-underline-color: #2aabd2;
+    }
+    .modal_button {
+        height: 40px;
+        width: 66px;
+        background: #87da8b;
+    }
+    .item1 {
+
+width: calc(100%/3);
+
+}
+    .parent_width {
+      width: 100%;
+    }
+    .container_33 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   vertical-align: middle;
+}
+.container_33 div {
+  width: 100%;
+  /*padding: 5px;*/
+
+}
+.container_33 button {
+  margin: auto;
+}
+.container_33 h4 {
+  margin: auto;
+}
+</style>
+
+
+
+<style>
+    .yearTable td{
+    border:1px solid #CCCCCC;
+    width:45px;
+    height:45px;
+    text-align:center;
+    vertical-align:middle;
+    font-style: italic;
+
+}
+
+.daySubscript {
+    /*width: 150px;*/
+    position: absolute;
+    top: 0;
+    /*right: -8px;*/
+    left: 5px;
+    font-style: italic;
+    font-size: small;
+    color: #09248c;
+    text-align: left;
+
+}
+.percent_broken_pixel {
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: small;
+    color: #02000c;
+    text-align: right;
+}
+</style>
+
+</body>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock javascript%}

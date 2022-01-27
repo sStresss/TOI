@@ -1,0 +1,137 @@
+
+{% extends "timetable/layout/basic.html" %}
+
+{% block title %}Monitoring{% endblock %}
+
+{% block content %}
+<body class="sinaps">
+
+<div class="padding">
+  <form name="first_form"  method="post" action="">
+  {% csrf_token %}
+    <table class="table">
+	  <tbody>
+        <tr><td></td>
+          <td><h4 class="card-title" style="text-align: center">ipV4</h4></td>
+          <td></td>
+        </tr>
+        <tr><td align="right"><label style="border: none" >Ip:</label></td>
+          <td><input type="text" id="ip" name="ip" class="form-control" data-inputmask="'alias': 'ip'"/></td>
+          <td><span id="ip_label"></span></td>
+        </tr>
+        <tr>
+          <td align="right"><label for="mask" style="border: none" >Маска:</label></td>
+          <td><input type="text" id="mask" name="mask" class="form-control" data-inputmask="'alias': 'ip'"/></td>
+          <td><span id="mask_label"></span></td>
+        </tr>
+        <tr>
+          <td align="right"><label for="gateway" style="border: none" >Шлюз:</label></td>
+          <td><input type="text" id="gateway" name="gateway" class="form-control" data-inputmask="'alias': 'ip'"/></td>
+          <td><span id="gateway_label"></span></td>
+        </tr>
+        <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+        <tr><td></td>
+          <td style="text-align: center"><button type="submit" class="color_button_timetable" name="on_display">
+             Применить</button></td>
+          <td></td>
+        </tr>
+	  </tbody>
+    </table>
+  </form>
+</div>
+
+<style>
+  .error {
+    color: red;
+    /*margin-left: 5px;*/
+  }
+  .padding {
+    padding: 13rem
+  }
+  .form-group label {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    background: #1b6d85;
+  }
+  .form-control {
+    width: 10em;
+    font-weight: 400;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+  }
+  .table {
+	width: 40rem;
+	margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    outline: 2px solid #b6b6b6;  /* outline можно задавать только для четырёх сторон одновременно */
+    outline-offset: 2rem;
+  }
+  .table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+  }
+  .table td {
+    border: 0;
+    width: 33%;
+	padding: 5px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .table td label{
+    width: 33%;
+	/*border: 1px solid #dddddd;*/
+	padding: 5px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    right: 0;
+    margin-left: auto;
+  }
+</style>
+
+<script>
+    $(document).ready(function() {
+  let valid = true;
+
+  $('#first_form').submit(function(e) {
+
+      let ip = document.forms["myForm"]["ip"].value;
+    let mask = document.forms["myForm"]["mask"].value;
+    let gateway = document.forms["myForm"]["gateway"].value;
+
+    $(".error").remove();
+    if (ip == '') {
+      $('#ip_label').before('<span class="error ">Введите ip</span>');
+      valid = false;
+    }
+    if (mask == '') {
+      $('#mask_label').after('<span class="error ">Введите маску</span>');
+      valid = false;
+    }
+    if (gateway == '') {
+      $('#gateway_label').after('<span class="error ">Введите шлюз</span>');
+      valid = false;
+    }
+    if( false == valid ) {
+		e.preventDefault(); // предотвращаем отправку формы, если есть ошибки валидации
+	}
+
+  });
+    });
+
+
+  $(document).ready(function(){
+  $(":input").inputmask();
+});
+</script>
+</body>
+
+
+
+{% endblock %}

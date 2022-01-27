@@ -1,0 +1,99 @@
+{% extends "timetable/layout/basic.html" %}
+{% block title %}Статистика{% endblock %}
+
+{% block content %}
+
+<body class="sinaps">
+<h1 style="text-align: center">Статистика платы</h1>
+<center>
+  <h3>Загруженность процессора:</h3>
+    <div class="chart_statistic x-60" id="proc">
+      <p id="val_proc">{{proc}}</p>
+    </div>
+  <h3>Заполнено памяти на устройстве:</h3>
+    <div class="chart_statistic x-20" id="memory">
+      <p id="val_memory">{{memory}}</p>
+    </div>
+</center>
+
+<style>
+      :root {
+  --size: 200px;
+  --bord: 10px;
+}
+  .x-60 {
+    --value: 65%;
+  }
+  .x-20 {
+    --value: 20%;
+  }
+  * {
+  box-sizing:border-box;
+}
+
+
+body {
+  margin:8em;
+}
+
+</style>
+<script>
+  const proc = document.getElementById('proc')
+  const valueProc = document.getElementById('val_proc')
+  const valueProcText = valueProc.textContent
+  console.log(valueProcText)
+  proc.style.setProperty('--value', valueProcText)
+
+  const memory = document.getElementById('memory')
+  const valueMemory = document.getElementById('val_memory')
+  const valueMemoryText = valueMemory.textContent
+  console.log(valueMemoryText)
+  memory.style.setProperty('--value', valueMemoryText)
+</script>
+<br>
+
+<center>
+  <form method="post" >
+        {% csrf_token %}
+    <button class="color_button_timetable" id="run1" >
+      Обновить
+    </button>
+  </form>
+</center>
+
+<br>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>name</th>
+    </tr>
+    <tr>
+        <td>#1</td>
+        <td>ole</td>
+    </tr>
+    <tr>
+        <td>#2</td>
+        <td>jeffrey</td>
+    </tr>
+    <tr>
+        <td>#3</td>
+        <td>collin</td>
+    </tr>
+    <tr>
+        <td>#4</td>
+        <td>eve</td>
+    </tr>
+</table>
+<script>
+  $(function() {
+    $('tr').hover(function() {
+        $(this).css('background-color', 'red')
+    },function() {
+        $(this).css('background-color', 'black')
+    }
+);
+});
+</script>
+</body>
+
+{% endblock %}

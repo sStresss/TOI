@@ -1,0 +1,325 @@
+{% extends "timetable/layout/basic.html" %}
+{% block title %}Monitoring{% endblock %}
+{% block content %}
+<br><br><br><br>
+
+
+
+
+<style>
+  .container {
+
+
+
+}
+
+/* Resize images */
+.container img {
+    width: 50%;
+    height: auto;
+}
+</style>
+<body>
+<h1 style="text-align: center">Мониторинг пикселей на ТОИ</h1>
+<center>
+<div class="container_33">
+  <div>
+    <div class="container">
+    <img src="/static/timetable/monitor.png" alt="">
+</div>
+  </div>
+
+
+  <div>
+    <div class="row" style="width: 400px">
+
+    {% for x in cab %}
+      <!-- Name TOI cabinet. x is amount broken pixel -->
+      <div class="col-sm-4">
+
+        <div class="card m-2">
+
+          <button type="button" class="modal_window" data-toggle="modal" data-target="#mod{{x}}" id={{x}}>
+            <div class="daySubscript">{{x}}</div>
+            <div class="percent_broken_pixel" id="percent_{{x}}"></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- The modal window for each cabinet -->
+      <div class="modal" id="mod{{x}}" style="background-color: #1c5e72">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            <!-- Modal cabinet header -->
+            <div class="modal-header" style="margin: 0 auto">
+              <h4 class="modal-title" >Кабинет № {{x}}</h4>
+            </div>
+
+            <!-- Modal cabinet body -->
+            <div class="row">
+
+              {% for y in pod_cab %}
+              <center>
+                <div class="modal-body">
+                  <div class="col-sm-4">
+                    <div class="card m-2">
+                      <button type="button" class="modal_button" data-toggle="modal"
+                              data-target="#pod_mod_{{y}}_{{x}}_" id="pod_{{y}}_{{x}}">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </center>
+
+              <!-- The modal for scoreboard -->
+              <div class="modal" id="pod_mod_{{y}}_{{x}}_" style="background-color: #1b6d85">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                  <!-- Modal scoreboard header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Модуль № {{y}} | на {{x}} кабинете</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                  </div>
+
+                    <!-- Modal scoreboard body -->
+                    <div class="modal-body" id="zor">
+                      <h1>Выберите цвет</h1>
+                        <ul class="tabs-links" id="pod_mod_{{y}}_{{x}}_link">
+                          <li style="background: red; color: #c9b9b9; width: 100px" id="pod_{{y}}_{{x}}_red">Красный</li>
+                          <li style="background: green; color: #c9b9b9; width: 100px" id="pod_{{y}}_{{x}}_green">Зелёный</li>
+                          <li style="background: blue; color: #c9b9b9; width: 100px" id="pod_{{y}}_{{x}}_blue">Синий</li>
+                        </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+          </div>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+  </div>
+  </div>
+
+
+  <div><form method="post">
+  {% csrf_token %}
+  <button class="color_button_timetable" id="run" type="submit">Посчитать</button>
+    </form>
+  </div>
+
+
+
+
+</div>
+</center>
+
+
+  <script>
+
+    function calculate_pix() {
+      function loadExhibitResource(file, opts ){
+        if (opts && opts.cache && opts.cache === 'no')   file += "?i="+(Math.random()*99999999);
+        let link  =  document.createElement("link");
+        link.href =  file;
+        link.type =  'application/json';
+        link.rel  =  'exhibit-data';
+        document.getElementsByTagName("head")[0].appendChild(link);
+      }
+      loadExhibitResource('/static/timetable/monitor2.json', {cache: 'no'} );
+      let zor_test = document.getElementById('start')
+      console.log(zor_test + 'zor')
+      $.getJSON( "/static/timetable/monitor2.json", function ( data, textStatus, jqXHR ) {
+        console.log(textStatus)
+        console.log(jqXHR)
+        for (let cabinet in data) {
+          if (typeof (cabinet) !== null) {
+            let buttonCabinet = document.getElementById(cabinet)
+            let numberDefectInCabinet = document.createTextNode(data[cabinet]['col'])
+            let labelPercentInCabinet = document.getElementById('percent_' + cabinet)
+            let PercentBrokenPixel = document.createTextNode(data[cabinet]['percent'] + '%')
+            labelPercentInCabinet.appendChild(PercentBrokenPixel)
+
+            if (numberDefectInCabinet !== null) {
+              buttonCabinet.appendChild(numberDefectInCabinet)
+              if (data[cabinet]['col'] !== 0) {
+                buttonCabinet.style.backgroundColor = '#e4605e'
+              }
+            }
+          }
+          for (let module in data[cabinet]) {
+            let buttonModule = document.getElementById('pod_' + module + '_' + cabinet)
+            let numberDefectInModule = document.createTextNode(data[cabinet][module]["mod_col"])
+            if (buttonModule !== null) {
+              buttonModule.appendChild(numberDefectInModule)
+              if (data[cabinet][module]["mod_col"] !== 0) {
+                buttonModule.style.backgroundColor = '#e4605e'
+              }
+              buttonModule.onclick = function () {
+                let idButtonModule = event.srcElement.id
+                console.log(idButtonModule + ' idButtonModule')
+                let splitCabinetName = idButtonModule.split('_')[2]
+                let splitModuleName = idButtonModule.split('_')[1]
+                let colorButton = ["red", "green", "blue"];
+                let listButton = [];
+                for(let a = 0; a < 3; a ++) {
+                  let idButtonModuleColor = idButtonModule + '_' + colorButton[a];
+                  let buttonModuleColor = document.getElementById(idButtonModuleColor)
+                  if (buttonModuleColor !==null) {
+                    listButton.push(buttonModuleColor)
+                  }
+                }
+                console.log(listButton)
+                for(let i = 0; i < listButton.length; i++) {
+                  (function (i){
+                    let linkButton = listButton[i];
+                    let colorButtonCheck = colorButton[i]
+                    let placeModulePix = 'pod_mod_' + splitModuleName + '_' + splitCabinetName + '_'
+                    linkButton.onclick = function() {
+                      for(let colorCheck in data[splitCabinetName][splitModuleName]){
+                       if(colorCheck == colorButton[i]){
+                        window.getComputedStyle(createTable(colorButton[i],
+                                data[splitCabinetName][splitModuleName][colorButtonCheck], placeModulePix)).opacity;
+                        }
+                      }
+                    }
+                  })(i)
+                }
+              }
+            }
+          }
+        }
+      })
+    }
+    calculate_pix()
+
+    // create table for defect pixel
+    function createTable(color, color_pix, placeInModal) {
+      console.log("in createTable")
+      let body = document.getElementById(placeInModal);
+      let tbl = document.createElement("table");
+      let tblBody = document.createElement("tbody");
+      for (let i = 0; i < color_pix.length; i++) {
+        var row = document.createElement("tr");
+        for (let j = 0; j < color_pix[i].length; j++) {
+          let cell = document.createElement("td");
+          let cellText = document.createTextNode(j+1);
+          cell.appendChild(cellText);
+          cell.style.textAlign = 'center'
+          cell.style.color = 'white'
+          cell.style.backgroundColor = color
+          cell.style.width = '25px'
+          cell.style.height = '25px'
+          tbl.style.left = '0'
+          tbl.style.right = '0'
+          tbl.style.marginLeft = 'auto'
+          tbl.style.marginRight = 'auto'
+          tbl.style.width = '800px'
+          tbl.style.position = 'absolute'
+          row.appendChild(cell);
+          if (color_pix[i][j] == 0) {
+              cell.style.backgroundColor = 'black'
+          }
+        }
+        tblBody.appendChild(row);
+      }
+      tbl.appendChild(tblBody);
+      body.appendChild(tbl);
+      tbl.setAttribute("border", "1");
+      return tbl
+    }
+  </script>
+</body>
+
+
+
+<style>
+    .tabs-links li {list-style: none; display: inline-block; padding: 5px 10px; border: 1px solid #333; cursor: pointer;
+      text-align: center}
+    .tabs-content {position: relative}
+    .tabs-content li {opacity: 0; position: absolute; transition: all 0.5s ease-in;}
+    .tabs-content li:first-child {opacity: 1;}
+    .modal_window {
+        height:120px;
+        width:120px;
+        background: #87da8b;
+        text-underline-color: #2aabd2;
+    }
+    .modal_button {
+        height: 40px;
+        width: 70px;
+        background: #87da8b;
+    }
+    .item1 {
+
+width: calc(100%/3);
+
+}
+    .parent_width {
+      width: 100%;
+    }
+    .container_33 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   vertical-align: middle;
+}
+.container_33 div {
+  width: 100%;
+  padding: 5px;
+
+}
+</style>
+
+
+
+<style>
+    .yearTable td{
+    border:1px solid #CCCCCC;
+    width:45px;
+    height:45px;
+    text-align:center;
+    vertical-align:middle;
+    font-style: italic;
+
+}
+
+.daySubscript {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-style: italic;
+    font-size: small;
+    color: #404f6e;
+
+}
+.percent_broken_pixel {
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: small;
+    color: #02000c;
+}
+</style>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock javascript%}

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %} Главная {% endblock %}</title>
+    <link  href="/static/timetable/bootstrap-4.5.3-dist/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/timetable/preloader/loaders.css"/>
+    <script src="/static/timetable/jquery-3.5.1.min.js"></script>
+    <script src="/static/timetable/jquery.inputmask.bundle.js"></script>
+    <link rel="shortcut icon" href="/static/timetable/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="main_nav">
+  <header id="header_basic">
+    <nav class="links_basic" style="--items: 8;" id="fixedbar">
+      <a href="{% url 'main'%}" class="menu">
+        <img src="/static/timetable/main.png"  width="130" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      <a href="{% url 'main'%}" class="menu">Главная</a>
+      <a href="{% url 'auto'%}" class="menu" id="cv">Яркость</a>
+      <a href="{% url 'pictures'%}" class="menu" id="nav_cv">Картинки</a>
+      <a href="{% url 'statistic'%}" class="menu">Статистика</a>
+      <a href="{% url 'monitoring'%}" class="menu">Мониторинг</a>
+      <a href="{% url 'test'%}" class="menu">Тестирование</a>
+      <a href="{% url 'ipconfig'%}" class="menu">ip-config</a>
+      <span class="line"></span>
+    </nav>
+  </header>
+    </div>
+</body>
+
+<style>
+
+.active, .menu:hover {
+  background-color: #3121D7;
+  color: #dc0f0f;
+}
+#cv #nav_cv a {
+                color:aqua;
+                background: #0b2e13;
+            }
+
+.links_basic {
+	background-color: #160B8C;
+	background-image: linear-gradient(to bottom, #0003, transparent);
+	/*border-bottom: 1px solid #0003;*/
+	box-shadow: 0 0 32px #0003;
+    position: fixed;
+    overflow: hidden;
+    /*z-index: 12;*/
+}
+.links_basic > a {
+	color: #ffffff;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+    top: 50%;
+    display: block;
+}
+
+.links_basic > a:hover {
+	background: #ffffff06;
+	color: #ffffff;
+}
+.links_basic > a:active {
+	background: rgba(232, 10, 10, 0.02);
+	color: #f10f0f;
+}
+
+.links_basic > .line {
+	background: #ffffff;
+	height: 1px;
+	pointer-events: none;
+}
+
+/* The Magic */
+#header_basic {
+    overflow: hidden;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+
+    width: 100%;
+}
+.links_basic {
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+
+}
+.links_basic > .line {
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+.links_basic > a:hover ~ .line {
+	opacity: 1;
+}
+
+.links_basic > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links_basic > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links_basic > a:nth-of-type(3):hover ~ .line { --index: 3; }
+.links_basic > a:nth-of-type(4):hover ~ .line { --index: 4; }
+.links_basic > a:nth-of-type(5):hover ~ .line { --index: 5; }
+.links_basic > a:nth-of-type(6):hover ~ .line { --index: 6; }
+.links_basic > a:nth-of-type(7):hover ~ .line { --index: 7; }
+.links_basic > a:nth-of-type(8):hover ~ .line { --index: 8; }
+.links_basic > a:nth-of-type(9):hover ~ .line { --index: 9; }
+.links_basic > a:nth-of-type(10):hover ~ .line { --index: 10; }
+.links_basic > a:nth-of-type(11):hover ~ .line { --index: 11; }
+.links_basic > a:nth-of-type(12):hover ~ .line { --index: 12; }
+.links_basic > a:last-of-type:hover ~ .line { --index: var(--items); }
+</style>
+
+<script>
+  $(document).ready(function () {
+    var url = window.location.href;
+    let me = $('a');
+    //using jquery map
+    $(me).map(function(idx, elem) {
+      let adress = document.createTextNode($(elem).attr("href"))
+        if(url.includes($(elem).attr("href")) && adress.length > 2) {
+              console.log("active");
+              $(elem).addClass("active");
+      } else {
+      console.log("No");
+      }
+    });
+  }
+);
+</script>
+
+<body>
+  <main>
+    {% block content %}
+    {% endblock content %}
+  </main>
+  <script src="/static/timetable/jquery-3.5.1.min.js"></script>
+  <script src='/static/timetable/bootstrap.min.js'></script>
+    <script src="/static/timetable/jquery.inputmask.bundle.js"></script>
+
+  {% block javascript %}
+  {% endblock javascript%}
+</body>
+
+
+
+
+
+
+
+

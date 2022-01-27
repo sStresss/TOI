@@ -1,0 +1,155 @@
+{% extends "timetable/layout/basic.html" %}
+
+{% block title %}Тестирование{% endblock %}
+
+{% block content %}
+<body class="sinaps">
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
+<center>
+  <h1>Запуск тестирования экрана</h1>
+    <br><br><br>
+      {% if messages %}
+        {% for message in messages %}
+          <div style="width: 800px">
+          <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          </div>  
+        {% endfor %}
+    {% endif %}
+      <form method="post" >
+        {% csrf_token %}
+
+        <button type="submit" class="color_button_timetable" name="on_display">Включить</button>
+        <button type="submit" class="color_button_timetable" name="off_display">Выключить</button>
+        <br><br>
+        <h4>Вывести цвета на экран:</h4>
+        <button type="submit" class="color_button_timetable" name="white"><div id="square_white"></div></button>
+        <button type="submit" class="color_button_timetable" name="red"><div id="square_red"></div></button>
+        <button type="submit" class="color_button_timetable" name="blue"><div id="square_blue"></div></button>
+        <button type="submit" class="color_button_timetable" name="green"><div id="square_green"></div></button>
+        <br><br>
+        <button type="submit" class="color_button_timetable" name="back_display">Вернуться<br>к исходному</button>
+      </form>
+<style>
+  .color_button_timetable {
+    margin: 30px;
+    width: 160px!important;
+  }
+  #square_white {
+    width: 25px!important;
+    height: 25px!important;
+    background: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+  #square_red {
+    width: 25px!important;
+    height: 25px!important;
+    background: #ff182c;
+    margin-left: auto;
+    margin-right: auto;
+}
+  #square_green {
+    width: 25px!important;
+    height: 25px!important;
+    background: #3ee008;
+    margin-left: auto;
+    margin-right: auto;
+}
+  #square_blue {
+    width: 25px!important;
+    height: 25px!important;
+    background: #2f4cbe;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
+<style>
+
+
+    .preloader {
+      /*фиксированное позиционирование*/
+      position: fixed;
+      /* координаты положения */
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /* фоновый цвет элемента */
+      background: #e0e0e0;
+      /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+      z-index: 1001;
+    }
+
+    .preloader__row {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 70px;
+      height: 70px;
+      /*margin-top: -35px;*/
+      /*margin-left: -35px;*/
+      text-align: center;
+      animation: preloader-rotate 2s infinite linear;
+    }
+
+    .preloader__item {
+      position: absolute;
+      /*display: inline-block;*/
+      top: 0;
+      background-color: #337ab7;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      animation: preloader-bounce 2s infinite ease-in-out;
+    }
+
+    .preloader__item:last-child {
+      top: auto;
+      bottom: 0;
+      animation-delay: -1s;
+    }
+
+    @keyframes preloader-rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes preloader-bounce {
+
+      0%,
+      100% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    $(window).on('load', function () {
+      $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+    });
+  </script>
+
+{% endblock %}
+</body>
+{% block javascript %}
+
+{% endblock javascript %}

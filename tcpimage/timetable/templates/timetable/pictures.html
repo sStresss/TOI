@@ -1,0 +1,110 @@
+{% extends "timetable/layout/basic.html" %}
+{% block title %}Картинки{% endblock %}
+
+{% block content %}
+
+<body class="sinaps">
+  <div class="container" >
+
+<br><br>
+    <h1 style="text-align: center">Галерея изображений</h1>
+    <div class="second_nav"></div>
+    <div class="row" >
+      {% for x in pic %}
+        <div class="col-sm-4">
+          <div class="card m-2" >
+            <img src="{{ x.photo.url }}" alt="" class="card-img-top" height="200px" >
+              <div class="card-footer" style="align-items: center; text-align: center">
+                <small class="text-muted">
+                  <label>Загружен: </label>
+                    {{ x.date }}
+                </small><br>
+                <label for="chek" >Выбрать</label>
+                <label><input type="checkbox" value="{{ x.photo }}" class="chkcvalues" style="display: inline-block; z-index: 10"></label>
+                  {{ x.photo }}
+                <form method="post" action="{% url 'delete_image' x.pk %}">
+                  {% csrf_token %}
+                  <button type="submit"  style="background: #EC6DD4; border-radius: 10px">
+                    Удалить
+                  </button>
+
+                </form>
+              </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+
+<br><br><br><br>
+<center>
+  <h4>Загрузить выбранные фото на ТОИ</h4><br>
+    <form method="post">
+      {% csrf_token %}
+      <div class="input-group mb-3" style="width: 800px">
+        <input type="text" class="form-control" placeholder="выбранные фото.." aria-label="Recipient's username"
+             aria-describedby="basic-addon2" name="image_list" id="txt_values">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit" id="but2"
+                  onclick="return alert('Выполнить загрузку фото?')">Загрузить на плату</button>
+        </div>
+      </div>
+    </form>
+</center>
+<br><br><br><br>
+  <div class="box_input">
+    <div class="input_image">
+      <h4 class="mb-3">Добавить изображение</h4>
+        <form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form }}
+          <input type="submit"  style="background: #EC6DD4" value="Загрузить">
+        </form>
+    </div>
+  </div>
+<br><br><br><br>
+
+</body>
+<style>
+  .main_nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  .second_nav {
+    position: relative;
+    z-index: 5;
+  }
+  .box_input {
+    align-items: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .input_image {
+
+    text-align: center;
+    outline: 2px solid #b6b6b6;  /* outline можно задавать только для четырёх сторон одновременно */
+    outline-offset: 2rem;
+
+  }
+
+</style>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(document).ready(function () {
+  $('.chkcvalues').click(function () {
+  var txt = "";
+  $('.chkcvalues:checked').each(function () {
+    txt += $(this).val() + ", "
+    });
+    txt = txt.substring(0, txt.length - 1);
+    $('#txt_values').val(txt);
+      });
+    });
+</script>
+{% endblock javascript %}

@@ -1,0 +1,604 @@
+2021-07-26 15:23:00,913 : start get_current_bright in CurrentBright
+2021-07-26 15:23:01,125 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:23:01,125 : start get_current_bright in CurrentBright
+2021-07-26 15:23:01,523 :     Input bright: 10
+2021-07-26 15:23:11,690 : start get_current_bright in CurrentBright
+2021-07-26 15:23:11,909 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:23:11,909 : start get_current_bright in CurrentBright
+2021-07-26 15:23:12,206 :     Input bright: 10
+2021-07-26 15:23:22,382 : start get_current_bright in CurrentBright
+2021-07-26 15:23:22,752 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:23:22,753 : start get_current_bright in CurrentBright
+2021-07-26 15:23:23,060 :     Input bright: 10
+2021-07-26 15:23:33,651 : start get_current_bright in CurrentBright
+2021-07-26 15:23:33,849 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:23:33,849 : start get_current_bright in CurrentBright
+2021-07-26 15:23:34,452 :     Input bright: 10
+2021-07-26 15:25:26,446 : start get_current_bright in CurrentBright
+2021-07-26 15:25:26,621 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:25:26,621 : start get_current_bright in CurrentBright
+2021-07-26 15:25:27,078 :     Input bright: 10
+2021-07-26 15:25:37,318 : start get_current_bright in CurrentBright
+2021-07-26 15:25:37,445 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:25:37,445 : start get_current_bright in CurrentBright
+2021-07-26 15:25:38,377 :     Input bright: 10
+2021-07-26 15:25:48,570 : start get_current_bright in CurrentBright
+2021-07-26 15:25:48,788 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:25:48,789 : start get_current_bright in CurrentBright
+2021-07-26 15:25:50,328 :     Input bright: 10
+2021-07-26 15:26:00,479 : start get_current_bright in CurrentBright
+2021-07-26 15:26:00,612 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:26:00,613 : start get_current_bright in CurrentBright
+2021-07-26 15:26:01,153 :     Input bright: 10
+2021-07-26 15:26:11,344 : start get_current_bright in CurrentBright
+2021-07-26 15:26:11,460 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:26:11,461 : start get_current_bright in CurrentBright
+2021-07-26 15:28:04,510 : start get_current_bright in CurrentBright
+2021-07-26 15:28:04,671 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:28:04,718 : start get_current_bright in CurrentBright
+2021-07-26 15:28:20,234 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 764, in main
+    set_auto_br.set_auto_bright()
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 112, in set_auto_bright
+    raise Exception("    bad answer")
+Exception:     bad answer
+2021-07-26 15:28:36,201 : start get_current_bright in CurrentBright
+2021-07-26 15:28:37,253 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:28:37,296 : start get_current_bright in CurrentBright
+2021-07-26 15:28:49,366 : start get_current_bright in CurrentBright
+2021-07-26 15:28:49,610 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:28:49,657 : start get_current_bright in CurrentBright
+2021-07-26 15:29:00,278 : start get_current_bright in CurrentBright
+2021-07-26 15:29:00,539 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:29:00,583 : start get_current_bright in CurrentBright
+2021-07-26 15:29:10,880 : start get_current_bright in CurrentBright
+2021-07-26 15:29:11,049 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:29:11,105 : start get_current_bright in CurrentBright
+2021-07-26 15:29:21,817 : start get_current_bright in CurrentBright
+2021-07-26 15:29:21,946 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:29:21,989 : start get_current_bright in CurrentBright
+2021-07-26 15:29:32,416 : start get_current_bright in CurrentBright
+2021-07-26 15:29:32,812 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 724, in main
+    md5 = find_md5(in_image)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\media/myimage\\.jpg'
+2021-07-26 15:29:32,863 : start get_current_bright in CurrentBright
+2021-07-26 15:29:48,442 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 764, in main
+    set_auto_br.set_auto_bright()
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 112, in set_auto_bright
+    raise Exception("    bad answer")
+Exception:     bad answer
+2021-07-26 15:30:03,911 : start get_current_bright in CurrentBright
+2021-07-26 15:54:35,218 :      clear_output_catalog
+2021-07-26 15:54:35,219 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 728, in main
+    clear_output_catalog(constant.path)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 421, in clear_output_catalog
+    for file_object in os.listdir(folder_path):
+FileNotFoundError: [WinError 3] Системе не удается найти указанный путь: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\output'
+2021-07-26 16:00:47,893 :         create json plan_list and json plan_list0
+2021-07-26 16:00:47,894 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 730, in main
+    create_json_plan_list(md5_list, pic_size_list, constant.path, raster_name)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 436, in create_json_plan_list
+    json_plan_list = open(source_path + 'planlist1.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimageplanlist1.json'
+2021-07-26 16:06:00,556 :         create json plan_list and json plan_list0
+2021-07-26 16:06:00,557 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 731, in main
+    create_json_plan_list(md5_list, pic_size_list, path_for_json, raster_name)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 436, in create_json_plan_list
+    json_plan_list = open(source_path + 'planlist1.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\timetable/tcp_test_z/sourceplanlist1.json'
+2021-07-26 16:20:14,213 :         create json plan_list and json plan_list0
+2021-07-26 16:20:14,213 : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 731, in main
+    create_json_plan_list(md5_list, pic_size_list, path_for_json, raster_name)
+  File "C:\Users\Гамбоев\Desktop\TOI_prod\TOI_\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 436, in create_json_plan_list
+    json_plan_list = open(source_path + 'planlist1.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://Users/Гамбоев/Desktop/TOI_prod/TOI_/tcpimage\\timetable/tcp_test_z/sourceplanlist1.json'
+2021-07-26 16:22:17,410 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 720, in main
+    md5 = find_md5(in_image)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/media/myimage\\4.jpg'
+2021-07-26 16:26:22,644 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 721, in main
+    md5 = find_md5(in_image)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/media/myimage\\4.jpg'
+2021-07-26 16:27:12,640 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 721, in main
+    md5 = find_md5(in_image)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/media/myimage\\4.jpg'
+2021-07-26 16:29:46,626 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 721, in main
+    md5 = find_md5(in_image)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://media//myimage\\1.jpg'
+2021-07-26 16:32:04,745 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 722, in main
+    md5 = find_md5(in_image)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C://media//myimage\\4.jpg'
+2021-07-26 16:34:29,894 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 722, in main
+    md5 = find_md5(in_image)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/media/myimage\\2.jpg'
+2021-07-26 16:36:06,886 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 722, in main
+    md5 = find_md5(in_image)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 518, in find_md5
+    pic = open(image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/media/myimage\\3.jpg'
+2021-07-26 16:37:31,269 :         create json plan_list and json plan_list0
+2021-07-26 16:37:31,269 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 729, in main
+    create_json_plan_list(md5_list, pic_size_list, path_for_json, raster_name)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 436, in create_json_plan_list
+    json_plan_list = open(source_path + 'planlist1.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/timetable/tcp_test_z/sourceplanlist1.json'
+2021-07-26 16:39:16,319 :         create json plan_list and json plan_list0
+2021-07-26 16:39:16,319 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 729, in main
+    create_json_plan_list(md5_list, pic_size_list, path_for_json, raster_name)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 436, in create_json_plan_list
+    json_plan_list = open(source_path + 'planlist1.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/TOI/tcpimage/timetable/tcp_test_z/sourceplanlist1.json'
+2021-07-26 16:40:50,349 :         create json plan_list and json plan_list0
+2021-07-26 16:40:50,349 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 729, in main
+    create_json_plan_list(md5_list, pic_size_list, path_for_json, raster_name)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 445, in create_json_plan_list
+    json_out_planlist = open(source_path + 'output/planlist.json', "a", encoding='utf8')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/TOI/tcpimage/timetable/tcp_test_z/sourceoutput/planlist.json'
+2021-07-26 16:41:56,080 :         create json plan_list and json plan_list0
+2021-07-26 16:41:56,083 : className: UpdateImage
+2021-07-26 16:41:56,083 :     run
+2021-07-26 16:41:56,083 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 735, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 272, in run
+    pic = open(in_image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/TOI/tcpimage/timetable/tcp_test_z/sourcemulti_input/2.jpg'
+2021-07-26 16:43:22,042 :         create json plan_list and json plan_list0
+2021-07-26 16:43:22,043 : className: UpdateImage
+2021-07-26 16:43:22,043 :     run
+2021-07-26 16:43:22,043 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 735, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 272, in run
+    pic = open(in_image, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/TOI/tcpimage/timetable/tcp_test_z/source/multi_input/2.jpg'
+2021-07-26 16:47:08,393 :         create json plan_list and json plan_list0
+2021-07-26 16:47:08,394 : className: UpdateImage
+2021-07-26 16:47:08,395 :     run
+2021-07-26 16:47:08,395 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-26 16:47:08,395 :       size input image: 1176853
+2021-07-26 16:47:08,399 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 737, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 290, in run
+    shutil.copyfile(self.in_path, md5output_path)
+  File "C:\python_3.7\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/TOI/tcpimage/timetable/tcp_test_z/sourceoutput/11998027e22c3d2005ce71edbe5af256.png'
+2021-07-26 16:48:38,321 :         create json plan_list and json plan_list0
+2021-07-26 16:48:38,322 : className: UpdateImage
+2021-07-26 16:48:38,322 :     run
+2021-07-26 16:48:38,322 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-26 16:48:38,322 :       size input image: 1176853
+2021-07-26 16:48:38,417 :         sending_to_plat
+2021-07-26 16:48:39,140 :             find_port_value
+2021-07-26 16:48:39,141 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 737, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 392, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 408, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 16:51:31,850 :         create json plan_list and json plan_list0
+2021-07-26 16:51:31,852 : className: UpdateImage
+2021-07-26 16:51:31,852 :     run
+2021-07-26 16:51:31,852 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-26 16:51:31,852 :       size input image: 1176853
+2021-07-26 16:51:31,879 :         sending_to_plat
+2021-07-26 16:51:32,712 :             find_port_value
+2021-07-26 16:51:32,713 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 737, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 392, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 408, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 16:52:21,586 :         create json plan_list and json plan_list0
+2021-07-26 16:52:21,587 : className: UpdateImage
+2021-07-26 16:52:21,587 :     run
+2021-07-26 16:52:21,587 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-26 16:52:21,587 :       size input image: 1176853
+2021-07-26 16:52:29,339 :         sending_to_plat
+2021-07-26 16:52:33,325 :             find_port_value
+2021-07-26 16:52:33,325 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 737, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 392, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 408, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:27:21,996 :         create json plan_list and json plan_list0
+2021-07-26 17:27:22,086 : className: UpdateImage
+2021-07-26 17:27:22,086 :     run
+2021-07-26 17:27:22,086 :       input image: C:/TOI/tcpimage/media/myimage/4.jpg
+2021-07-26 17:27:22,086 :       size input image: 136213
+2021-07-26 17:27:22,095 :         sending_to_plat
+2021-07-26 17:27:22,669 :             find_port_value
+2021-07-26 17:27:22,669 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 737, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 392, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 408, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:29:11,029 :         create json plan_list and json plan_list0
+2021-07-26 17:29:11,030 : className: UpdateImage
+2021-07-26 17:29:11,030 :     run
+2021-07-26 17:29:11,030 :       input image: C:/TOI/tcpimage/media/myimage/4.jpg
+2021-07-26 17:29:11,030 :       size input image: 136213
+2021-07-26 17:29:11,050 :         sending_to_plat
+2021-07-26 17:29:11,817 :             find_port_value
+2021-07-26 17:29:11,818 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 737, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 392, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 408, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:30:40,768 :         create json plan_list and json plan_list0
+2021-07-26 17:30:40,770 : className: UpdateImage
+2021-07-26 17:30:40,770 :     run
+2021-07-26 17:30:40,770 :       input image: C:/TOI/tcpimage/media/myimage/4.jpg
+2021-07-26 17:30:40,770 :       size input image: 136213
+2021-07-26 17:30:40,785 :         sending_to_plat
+2021-07-26 17:30:41,401 :             find_port_value
+2021-07-26 17:30:41,401 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 738, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 392, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 408, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:32:38,110 :         create json plan_list and json plan_list0
+2021-07-26 17:32:38,111 : className: UpdateImage
+2021-07-26 17:32:38,111 :     run
+2021-07-26 17:32:38,111 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-26 17:32:38,111 :       size input image: 1176853
+2021-07-26 17:32:38,137 :         sending_to_plat
+2021-07-26 17:32:38,753 :             find_port_value
+2021-07-26 17:32:38,754 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 739, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 392, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 408, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:34:44,551 :         create json plan_list and json plan_list0
+2021-07-26 17:34:44,552 : className: UpdateImage
+2021-07-26 17:34:44,552 :     run
+2021-07-26 17:34:44,553 :       input image: C:/TOI/tcpimage/media/myimage/1.jpg
+2021-07-26 17:34:44,553 :       size input image: 374180
+2021-07-26 17:34:44,559 :         sending_to_plat
+2021-07-26 17:34:45,143 :             find_port_value
+2021-07-26 17:34:45,143 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 740, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 393, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 409, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:36:05,955 :         create json plan_list and json plan_list0
+2021-07-26 17:36:05,956 : className: UpdateImage
+2021-07-26 17:36:05,956 :     run
+2021-07-26 17:36:05,956 :       input image: C:/TOI/tcpimage/media/myimage/1.jpg
+2021-07-26 17:36:05,956 :       size input image: 374180
+2021-07-26 17:36:05,970 :         sending_to_plat
+2021-07-26 17:36:06,626 :             find_port_value
+2021-07-26 17:36:06,626 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 741, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 394, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 410, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:37:27,349 :         create json plan_list and json plan_list0
+2021-07-26 17:37:27,350 : className: UpdateImage
+2021-07-26 17:37:27,350 :     run
+2021-07-26 17:37:27,351 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-26 17:37:27,351 :       size input image: 1176853
+2021-07-26 17:37:27,363 :         sending_to_plat
+2021-07-26 17:37:28,012 :             find_port_value
+2021-07-26 17:37:28,012 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 743, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 394, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 412, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:40:03,451 :         create json plan_list and json plan_list0
+2021-07-26 17:40:03,452 : className: UpdateImage
+2021-07-26 17:40:03,452 :     run
+2021-07-26 17:40:03,452 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-26 17:40:03,452 :       size input image: 1176853
+2021-07-26 17:40:03,562 :         sending_to_plat
+2021-07-26 17:40:04,384 :             find_port_value
+2021-07-26 17:40:04,384 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 743, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 394, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 412, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-26 17:42:20,002 :         create json plan_list and json plan_list0
+2021-07-26 17:42:20,003 : className: UpdateImage
+2021-07-26 17:42:20,003 :     run
+2021-07-26 17:42:20,004 :       input image: C:/TOI/tcpimage/media/myimage/1.jpg
+2021-07-26 17:42:20,004 :       size input image: 374180
+2021-07-26 17:42:20,014 :         sending_to_plat
+2021-07-26 17:42:20,677 :             find_port_value
+2021-07-26 17:42:20,677 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 744, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 395, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 413, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-27 10:01:41,385 : start get_current_bright in CurrentBright
+2021-07-27 10:01:41,922 :         create json plan_list and json plan_list0
+2021-07-27 10:01:41,925 : className: UpdateImage
+2021-07-27 10:01:41,926 :     run
+2021-07-27 10:01:41,926 :       input image: C:/TOI/tcpimage/media/myimage/4.jpg
+2021-07-27 10:01:41,926 :       size input image: 136213
+2021-07-27 10:01:41,934 :         sending_to_plat
+2021-07-27 10:01:42,497 :             find_port_value
+2021-07-27 10:01:42,497 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 744, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 295, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 395, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 413, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-27 10:04:29,317 : start get_current_bright in CurrentBright
+2021-07-27 10:04:29,842 :         create json plan_list and json plan_list0
+2021-07-27 10:04:29,848 : className: UpdateImage
+2021-07-27 10:04:29,848 :     run
+2021-07-27 10:04:29,849 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-27 10:04:29,849 :       size input image: 1176853
+2021-07-27 10:04:29,891 :         sending_to_plat
+2021-07-27 10:04:30,438 :             find_port_value
+2021-07-27 10:04:30,438 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 745, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 296, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 396, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 414, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-27 10:06:01,624 : start get_current_bright in CurrentBright
+2021-07-27 10:06:02,280 :         create json plan_list and json plan_list0
+2021-07-27 10:06:02,284 : className: UpdateImage
+2021-07-27 10:06:02,285 :     run
+2021-07-27 10:06:02,285 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-27 10:06:02,285 :       size input image: 1176853
+2021-07-27 10:06:02,366 :         sending_to_plat
+2021-07-27 10:06:03,224 :             find_port_value
+2021-07-27 10:06:03,224 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 746, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 297, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 397, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 415, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-27 13:30:32,566 : start get_current_bright in CurrentBright
+2021-07-27 13:30:33,056 :         create json plan_list and json plan_list0
+2021-07-27 13:30:33,060 : className: UpdateImage
+2021-07-27 13:30:33,061 :     run
+2021-07-27 13:30:33,061 :       input image: C:/TOI/tcpimage/media/myimage/2.jpg
+2021-07-27 13:30:33,061 :       size input image: 1176853
+2021-07-27 13:30:33,076 :         sending_to_plat
+2021-07-27 13:30:33,965 :             find_port_value
+2021-07-27 13:30:33,966 : Exception occurred
+Traceback (most recent call last):
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 746, in main
+    update.run()
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 297, in run
+    self.sending_to_plata(sock)
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 397, in sending_to_plata
+    ftp_data_port = self.find_port_value(str(resp1))
+  File "C:\TOI\tcpimage\timetable\tcp_test_z\NovaT3Torch_multi_True.py", line 415, in find_port_value
+    value_split_2 = str(value_split[5]).find(")")
+IndexError: list index out of range
+2021-07-27 13:36:29,181 : start get_current_bright in CurrentBright
+2021-07-27 13:37:33,992 : start get_current_bright in CurrentBright
+2021-07-27 13:38:48,457 : start get_current_bright in CurrentBright
+2021-07-27 13:39:59,268 : start get_current_bright in CurrentBright
+2021-07-27 13:40:59,619 : start get_current_bright in CurrentBright
+2021-07-27 13:44:14,500 : start get_current_bright in CurrentBright

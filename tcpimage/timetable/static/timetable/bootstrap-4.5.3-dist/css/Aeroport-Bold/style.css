@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aeroport';
+    src: local('Aeroport Bold'), local('Aeroport-Bold'),
+        url('Aeroport-Bold.woff2') format('woff2'),
+        url('Aeroport-Bold.woff') format('woff'),
+        url('Aeroport-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

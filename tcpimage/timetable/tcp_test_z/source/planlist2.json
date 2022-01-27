@@ -1,0 +1,46 @@
+{
+  "name": "local_net_planl",
+  "source": {
+    "type": 1,
+    "platform": 2
+  },
+  "playRelations": [
+    {
+      "fileName": "playSolutionRelation.json",
+      "md5": "0177f41b612adf432898f898a10975af"
+    }
+  ],
+  "playSolutions": [
+    {
+      "fileName": "play_solution.json",
+      "md5": "38cd97d32a76eb0af5d10e8f95d5f0ed"
+    }
+  ],
+  "playlists": [
+    {
+      "fileName": "playlist0.json",
+      "md5": "6a559f509018af1e30ddbeffc54e16b8"
+    }
+  ],
+  "scheduleConstraints": [
+    {
+      "fileName": "schedule_constraint.json",
+      "md5": "209e34fa93c195130a0e0d82542cffd7"
+    }
+  ],
+  "medialists": [],
+  "resources": [
+    {
+      "fileName": "d7967e81c4c883cd4eeaa0e683ebf24a.png",
+      "md5": "d7967e81c4c883cd4eeaa0e683ebf24a",
+      "type": "PICTURE",
+      "size": 1876
+    },
+    {
+      "fileName": "8d394b64ab76e7919bf3dce7cbe5d1cb.png",
+      "md5": "8d394b64ab76e7919bf3dce7cbe5d1cb",
+      "type": "PICTURE",
+      "size": 3399
+    }
+  ]
+}

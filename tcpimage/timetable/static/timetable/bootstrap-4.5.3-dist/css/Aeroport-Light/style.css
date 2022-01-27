@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aeroport';
+    src: local('Aeroport Light'), local('Aeroport-Light'),
+        url('Aeroport-Light.woff2') format('woff2'),
+        url('Aeroport-Light.woff') format('woff'),
+        url('Aeroport-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
